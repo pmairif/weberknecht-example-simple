@@ -6,33 +6,31 @@
 package net.sf.weberknecht.simple_example.actions;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import de.highbyte_le.weberknecht.request.ContentProcessingException;
 import de.highbyte_le.weberknecht.request.View;
-import de.highbyte_le.weberknecht.request.actions.Action;
+import de.highbyte_le.weberknecht.request.actions.ActionBase;
 import de.highbyte_le.weberknecht.request.actions.ActionExecutionException;
+import de.highbyte_le.weberknecht.request.actions.WebAction;
 
 /**
  * Hello world action
  * 
  * @author pmairif
  */
-public class HelloAction implements Action {
+public class HelloAction extends ActionBase implements WebAction {
 	
 	private String greetingsTo;
 
 	/* (non-Javadoc)
-	 * @see de.highbyte_le.weberknecht.request.actions.ExecutableAction#execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 * @see de.highbyte_le.weberknecht.request.actions.ActionBase#onGet(javax.servlet.http.HttpServletRequest, java.lang.String)
 	 */
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ActionExecutionException,
+	protected void onGet(HttpServletRequest request, String task) throws IOException, ActionExecutionException,
 			ContentProcessingException {
 
 		this.greetingsTo = "world";
@@ -56,21 +54,5 @@ public class HelloAction implements Action {
 	@Override
 	public View getView() {
 		return new View("hello.jsp");
-	}
-
-	/* (non-Javadoc)
-	 * @see de.highbyte_le.weberknecht.request.DatabaseCapable#needsDatabase()
-	 */
-	@Override
-	public boolean needsDatabase() {
-		return false;
-	}
-
-	/* (non-Javadoc)
-	 * @see de.highbyte_le.weberknecht.request.DatabaseCapable#setDatabase(java.sql.Connection)
-	 */
-	@Override
-	public void setDatabase(Connection con) {
-		//
 	}
 }
