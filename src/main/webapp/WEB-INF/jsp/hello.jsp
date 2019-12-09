@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@page import="de.highbyte_le.weberknecht.request.ModelHelper"%>
+<%@page import="com.github.pmairif.weberknecht.request.ModelHelper"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

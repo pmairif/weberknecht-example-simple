@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weberknecht>
+	<actions>
+		<action name="hello" class="com.github.pmairif.weberknecht.simple_example.actions.HelloAction" />
+	</actions>
+</weberknecht>

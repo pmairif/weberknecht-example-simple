@@ -5,7 +5,7 @@
   	<servlet>
 		<display-name>Controller</display-name>
 		<servlet-name>Controller</servlet-name>
-		<servlet-class>de.highbyte_le.weberknecht.Controller</servlet-class>
+		<servlet-class>com.github.pmairif.weberknecht.Controller</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

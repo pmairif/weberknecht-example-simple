@@ -4,3 +4,5 @@ build
 .settings/
 /weberknecht-example-simple.iml
 /.idea
+/.gradle
+/out
